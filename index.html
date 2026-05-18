@@ -3,38 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>54th St. Soul Cafe</title>
+  <title>54th Street Soul Food Catering</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
+  
   <nav>
     <div class="nav-inner">
       <a class="logo" href="#">54th<span>Street</span></a>
       <ul class="nav-links">
-        <li><a href="#menu-section">Our Menu</a></li>
+        <li><a href="#menu">Our Menu</a></li>
         <li><a href="#senior-meals">Senior Meals</a></li>
         <li><a href="#catering-inquiry">Book Catering</a></li>
-        <li><a href="#location-section">Location</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#catering-inquiry" class="nav-order">Inquire Now</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Authentic Southern<br><span>Catering & Meal Services</span></h1>
-      <p>From our family kitchen to your large gatherings and senior homes. Freshly prepared comfort food serving Seattle's South End community.</p>
-      <div class="hero-btns">
-        <a href="#catering-inquiry" class="btn-primary">Book Catering Services</a>
-        <a href="#menu-section" class="btn-secondary-hero">View Menu Selections</a>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Authentic Southern<br><span>Catering & Meal Services</span></h1>
+        <p>From our family kitchen to your large gatherings and senior homes. Freshly prepared comfort food serving Seattle's South End community.</p>
+        <div class="hero-btns">
+          <a href="#catering-inquiry" class="btn-primary">Book Catering Services</a>
+          <a href="#menu" class="btn-secondary">View Menu Selections</a>
+        </div>
+      </div>
+      <div class="hero-img-box">
+        <p>"You're not just booking a service, you're welcoming family. We share authentic soul food to preserve black culinary traditions and support our community. Our name marks the street we grew up on, where Mom fed anyone who was hungry. If you see the grill smoke—your soul is welcome here."</p>
       </div>
     </div>
-    <div class="hero-img-box">
-      <p>"You're not just booking a service, you're welcoming family. We share authentic soul food to preserve black culinary traditions and support our community. Our name marks the street we grew up on, where Mom fed anyone who was hungry. If you see the grill smoke—your soul is welcome here."</p>
-    </div>
-  </header>
+  </section>
 
   <span id="senior-meals"></span>
   <section class="senior-promo-section">
@@ -53,24 +54,27 @@
     </div>
   </section>
 
-  <section id="menu-section" class="menu-container">
-    <h2 class="section-title">Our Soulful Menu</h2>
-    
-    <div class="tabs-container">
-      <button class="tab active" onclick="filterMenu('all', this)">All Selections</button>
-      <button class="tab" onclick="filterMenu('dinner', this)">Dinners</button>
-      <button class="tab" onclick="filterMenu('Po\' Boi', this)">Po' Bois</button>
-      <button class="tab" onclick="filterMenu('Baskets', this)">Baskets</button>
-      <button class="tab" onclick="filterMenu('Side Dishes', this)">Sides & Sauces</button>
-      <button class="tab" onclick="filterMenu('drinks', this)">Drinks</button>
-      <button class="tab" onclick="filterMenu('desserts', this)">Desserts</button>
-    </div>
-
-    <div class="menu-grid" id="menu-grid">
+  <section class="menu-section">
+    <span id="menu"></span>
+    <div class="section-inner">
+      <div class="section-label">Handcrafted Offerings</div>
+      <div class="section-title">Catering Menu & Trays</div>
+      <div class="tabs">
+        <button class="tab active" onclick="filterMenu('all',this)">All Selections</button>
+        <button class="tab" onclick="filterMenu('dinner',this)">Dinners / Gumbo</button>
+        <button class="tab" onclick="filterMenu('Po\' Boi',this)">Po' Bois</button>
+        <button class="tab" onclick="filterMenu('Baskets',this)">Baskets</button>
+        <button class="tab" onclick="filterMenu('Side Dishes',this)">Sides & Sauces</button>
+        <button class="tab" onclick="filterMenu('drinks',this)">Drinks</button>
+        <button class="tab" onclick="filterMenu('desserts',this)">Desserts</button>
       </div>
-
-    <div id="view-more-container" style="text-align: center; margin-top: 2rem;">
-      <button id="view-more-btn" class="btn-secondary" onclick="toggleShowAll()">View Full Menu Options</button>
+      
+      <div class="cards-grid" id="menu-grid">
+        </div>
+      
+      <div id="view-more-container" class="view-more">
+        <a id="view-more-btn" onclick="toggleShowAll()" class="btn-outline" style="cursor:pointer">View Full Menu Options</a>
+      </div>
     </div>
   </section>
 
@@ -105,6 +109,7 @@
           </div>
         </div>
       </div>
+
       <div class="promo-carousel-dots" id="promoDots"></div>
     </div>
   </section>
@@ -136,47 +141,98 @@
     </div>
   </section>
 
-  <section id="location-section" class="contact-location-container">
-    <div class="map-card" style="width: 100%; max-width: 1200px; margin: 0 auto;">
-      <h3>Our Socials & Location</h3>
-      <p class="address-text"><i class="fa-solid fa-location-dot"></i> 14200 International Blvd, Tukwila, Washington, 98168</p>
-      <p class="hours-text"><i class="fa-solid fa-clock"></i> Thu - Sat: 4:30 PM - 9:00 PM | Sun: 12:30 PM - 5:00 PM</p>
-      
-      <div class="rewards-perks" style="margin-bottom: 2rem;">
-        <a href="https://instagram.com/54thstsoulcafe" target="_blank" class="perk-link">
-          <i class="fa-brands fa-instagram" style="font-size: 2rem; color: var(--yellow);"></i>
-          <span class="perk-title">Instagram</span>
-          <p class="perk-text">Follow us @54thStreetCafe</p>
-        </a>
-        <a href="https://www.facebook.com/p/54th-Street-Soul-Cafe-61586404553813/" target="_blank" class="perk-link">
-          <i class="fa-brands fa-facebook" style="font-size: 2rem; color: var(--yellow);"></i>
-          <span class="perk-title">Facebook</span>
-          <p class="perk-text">Like our page for updates</p>
-        </a>
-      </div>
+  <span id="location"></span>
+  <section class="rewards-section">
+    <div class="section-inner">
+      <div class="rewards-inner">
+        <div>
+          <div class="section-label light">Where to Find Us</div>
+          <div class="section-title light">Our Socials & Location</div>
+          <p style="color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.7;margin-bottom:1.5rem">Please let us know how you enjoyed your experience with 54th Street Soul Food Catering and follow our main pages for rolling structural updates!</p>
+          <div class="rewards-perks">
 
-      <div class="map-responsive">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x5490437cbbaaaaaa%3A0x7cc30a6e83ef5f6c!2s14200%20International%20Blvd%2C%20Tukwila%2C%20WA%2098168!5e0!3m2!1sen!2sus!4v1716050000000!5m2!1sen!2sus" 
-          width="100%" 
-          height="450" 
-          style="border:0; border-radius: 8px;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+            <a href="https://www.instagram.com/54thstsoulcafe/" target="_blank" rel="noopener" class="perk perk-link">
+              <div class="perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="40" height="40">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </div>
+              <div class="perk-title">Instagram</div>
+              <p class="perk-text">Follow us @54thStreetCafe</p>
+            </a>
+
+            <a href="https://www.facebook.com/p/54th-Street-Soul-Cafe-61586404553813/" target="_blank" rel="noopener" class="perk perk-link">
+              <div class="perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </div>
+              <div class="perk-title">Facebook</div>
+              <p class="perk-text">Like our page for menu schedules</p>
+            </a>
+
+            <a href="https://www.yelp.com/biz/54th-st-soul-cafe-tukwila?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" rel="noopener" class="perk perk-link">
+              <div class="perk-icon">
+                <svg xmlns="https://cdn.simpleicons.org/yelp/currentColor" viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
+                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 14.5c-.3.6-1 .9-1.6.6l-2.8-1.4c-.6-.3-.8-1-.5-1.6l2-3.5c.1-.2.4-.2.5 0l2.8 5c.1.3.1.6-.4.9zm1-6.5c0 .6-.4 1-1 1s-1-.4-1-1V5c0-.6.4-1 1-1s1 .4 1 1v5zm5.3 5.2l-2.4 1.8c-.5.4-1.2.3-1.6-.2l-1.8-2.4c-.1-.2 0-.4.2-.4h5.4c.4 0 .5.4.2.8v.4zm.7-3.7c0 .6-.4 1-1 1h-3c-.2 0-.3-.2-.2-.4l1.5-2.6c.3-.5 1-.7 1.5-.4l1 .6c.5.3.7 1 .4 1.6l-.2.2z"/>
+                </svg>
+              </div>
+              <div class="perk-title">Yelp</div>
+              <p class="perk-text">Leave us a review!</p>
+            </a>
+
+            <a href="https://www.google.com/maps/place/54th+Street+Soul+Cafe/data=!4m2!3m1!1s0x0:0x784d9e1253e2d963?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener" class="perk perk-link">
+              <div class="perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="40" height="40">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="perk-title">Directions</div>
+              <p class="perk-text">Find our catering headquarters</p>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="rewards-app-box" style="padding:0;overflow:hidden;min-height:340px;display:flex;flex-direction:column">
+          <div style="background:rgba(0,0,0,.35);padding:1.2rem 1.5rem">
+            <div style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:.2rem">Catering Headquarters</div>
+            <p style="font-size:.82rem;color:rgba(255,255,255,.7);margin:0">54th Street Soul Food Cafe & Catering</p>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.752847921371!2d-122.283276!3d47.4752455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549043520e7c0901%3A0x784d9e1253e2d963!2s54th%20Street%20Soul%20Cafe!5e0!3m2!1sen!2sus!4v1776379186713!5m2!1sen!2sus"
+           width="100%"
+            style="flex:1;min-height:280px;border:none;display:block"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="footer-inner" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-      <div>
-        <h3 style="color: var(--yellow); font-family: var(--font-head);">54th Street Catering</h3>
-        <p style="font-size: 0.85rem; color: #aaa;">Authentic southern style comfort cuisine. Family catering pan trays, daily senior meal plans, and community love.</p>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <a class="footer-logo" href="#">54th<span>Street Catering</span></a>
+          <p class="footer-tagline">Authentic southern style comfort cuisine. Family catering pan trays, daily senior meal plans, and community love.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Our Services</div>
+          <ul class="footer-links">
+            <li><a href="#menu">Menu Selections</a></li>
+            <li><a href="#senior-meals">Senior Support Meals</a></li>
+            <li><a href="#catering-inquiry">Quote Inquiry</a></li>
+          </ul>
+        </div>
       </div>
-      <div style="font-size: 0.85rem; color: #888;">
-        © 2026 54th St. Soul Cafe & Catering. All Rights Reserved.
+      <div class="footer-bottom">
+        <p>&copy; 2026 54th Street Soul Food Cafe & Catering. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
