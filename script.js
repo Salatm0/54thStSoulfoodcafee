@@ -83,7 +83,6 @@ function renderMenu() {
   if (!grid) return;
   
   const items = activeFilter === 'all' ? menuItems : menuItems.filter(i => i.cat === activeFilter);
-  // Show all matching items directly since the list is beautifully compact now
   const show = items;
 
   grid.innerHTML = show.map(item => `
@@ -103,7 +102,6 @@ function renderMenu() {
     </div>
   `).join('');
 
-  // Hide the view more button container because everything fits perfectly now
   const container = document.getElementById('view-more-container');
   if (container) container.style.display = 'none';
 }
