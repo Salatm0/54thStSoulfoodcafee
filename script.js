@@ -106,7 +106,6 @@ function renderMenu() {
   if (container) container.style.display = 'none';
 }
 
-// Initial Run
 renderMenu();
 
 // ── PROMO CAROUSEL ──
