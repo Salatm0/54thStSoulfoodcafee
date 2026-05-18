@@ -14,6 +14,8 @@
       <a class="logo" href="#">54th<span>Street</span></a>
       <ul class="nav-links">
         <li><a href="#menu-section">Our Menu</a></li>
+        <li><a href="#senior-meals">Senior Meals</a></li>
+        <li><a href="#catering-inquiry">Book Catering</a></li>
         <li><a href="#location-section">Location</a></li>
       </ul>
     </div>
@@ -22,31 +24,40 @@
   <header class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>54th St. Soul Cafe</h1>
-      <p>Authentic Soul Food • Family Tradition • Deep Community Roots</p>
-      <a href="#menu-section" class="btn-primary">View Full Menu Options</a>
+      <h1>Authentic Southern<br><span>Catering & Meal Services</span></h1>
+      <p>From our family kitchen to your large gatherings and senior homes. Freshly prepared comfort food serving Seattle's South End community.</p>
+      <div class="hero-btns">
+        <a href="#catering-inquiry" class="btn-primary">Book Catering Services</a>
+        <a href="#menu-section" class="btn-secondary-hero">View Menu Selections</a>
+      </div>
+    </div>
+    <div class="hero-img-box">
+      <p>"You're not just booking a service, you're welcoming family. We share authentic soul food to preserve black culinary traditions and support our community. Our name marks the street we grew up on, where Mom fed anyone who was hungry. If you see the grill smoke—your soul is welcome here."</p>
     </div>
   </header>
 
-  <section class="promo-container">
-    <div class="promo-carousel" id="promoCarousel">
-      <div class="promo-block">
-        <h3>Our Mother's Legacy</h3>
-        <p>"If the grill is lit and smoking, there's always food for someone who's hungry." Serving the South End with love and pride.</p>
-      </div>
-      <div class="promo-block">
-        <h3>Rooted in Catfish Corner</h3>
-        <p>Co-owner Deon Austin learned his kitchen mastery working alongside family at Seattle's legendary Catfish Corner since age 20.</p>
+  <span id="senior-meals"></span>
+  <section class="senior-promo-section">
+    <div class="section-inner">
+      <div class="senior-card-wrapper">
+        <div class="senior-icon-side">🍲</div>
+        <div class="senior-content-side">
+          <div class="section-label">Community Support Program</div>
+          <div class="section-title">Senior Prepared Meal Plans</div>
+          <p class="senior-highlight-text">We proudly prepare nutritious, homestyle dinners tailored explicitly to dietary health needs for senior living complexes throughout our neighborhood.</p>
+          <div class="senior-price-badge">Just $5.00 per meal / per day</div>
+          <p class="senior-rules-notice">⚠️ 5-Day Minimum Required. For updated rotating schedules and localized menu charts, check our official Facebook link below.</p>
+          <a href="https://www.facebook.com/p/54th-Street-Soul-Cafe-61586404553813/" target="_blank" rel="noopener" class="btn-outline" style="color:#fff; border-color:#fff;">View Senior Menu on Facebook</a>
+        </div>
       </div>
     </div>
-    <div class="promo-dots" id="promoDots"></div>
   </section>
 
   <section id="menu-section" class="menu-container">
     <h2 class="section-title">Our Soulful Menu</h2>
     
     <div class="tabs-container">
-      <button class="tab active" onclick="filterMenu('all', this)">All Items</button>
+      <button class="tab active" onclick="filterMenu('all', this)">All Selections</button>
       <button class="tab" onclick="filterMenu('dinner', this)">Dinners</button>
       <button class="tab" onclick="filterMenu('Po\' Boi', this)">Po' Bois</button>
       <button class="tab" onclick="filterMenu('Baskets', this)">Baskets</button>
@@ -63,14 +74,90 @@
     </div>
   </section>
 
+  <section class="promo-blocks">
+    <div class="promo-carousel-wrapper section-inner">
+      <button class="promo-carousel-btn prev" onclick="promoSlide(-1)">←</button>
+      <button class="promo-carousel-btn next" onclick="promoSlide(1)">→</button>
+
+      <div class="promo-carousel" id="promoCarousel">
+        <div class="promo-block">
+          <div class="promo-block-img">🍗</div>
+          <div class="promo-block-body">
+            <span class="promo-block-label">Catering Event Favorites</span>
+            <h3 class="promo-block-title">Crispy Fried Chicken Wings Tray</h3>
+            <p class="promo-block-text">Golden, well-seasoned chicken wings fried to perfection. A crowd favorite for family unions and celebrations.</p>
+          </div>
+        </div>
+        <div class="promo-block">
+          <div class="promo-block-img">🐟</div>
+          <div class="promo-block-body">
+            <span class="promo-block-label">Signature Pan Trays</span>
+            <h3 class="promo-block-title">Bulk Fried Catfish Pieces</h3>
+            <p class="promo-block-text">Crispy cornmeal-battered catfish fillets, perfectly fried and kept hot. Perfect alongside bottles of Rosie's Sauce.</p>
+          </div>
+        </div>
+        <div class="promo-block">
+          <div class="promo-block-img">🍯</div>
+          <div class="promo-block-body">
+            <span class="promo-block-label">Take it Home</span>
+            <h3 class="promo-block-title">Rosie's Sauce Jars</h3>
+            <p class="promo-block-text">In loving memory of Rosemary Jackson. Our famous signature sauce is sold by the jar ($8) to perfectly complement your meals.</p>
+          </div>
+        </div>
+      </div>
+      <div class="promo-carousel-dots" id="promoDots"></div>
+    </div>
+  </section>
+
+  <span id="catering-inquiry"></span>
+  <section class="booking-section">
+    <div class="section-inner">
+      <div class="booking-grid">
+        <div>
+          <div class="section-label">Plan Your Event</div>
+          <div class="section-title">Request a Catering Quote</div>
+          <p style="color: var(--gray); margin-bottom: 1.5rem; line-height: 1.6;">Whether you are arranging a family gathering, church dinner, corporate luncheon, or recurring senior home support meal plans, please fill out the details here. Our family will get right back to you to confirm your setup options!</p>
+          <div class="bullet-highlight">✨ <strong>Featuring Rosie's Sauce ($8.00 / Jar)</strong> available for bulk catering inclusion!</div>
+        </div>
+        <form class="catering-form" onsubmit="alert('Thank you for your request! Our family will reach out to you directly very soon.'); return false;">
+          <input type="text" placeholder="Your Name / Organization" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <select required>
+            <option value="" disabled selected>Select Event Type</option>
+            <option value="catering">Standard Event Catering Tray Service</option>
+            <option value="senior">Senior Meal Delivery Program Enrollment</option>
+            <option value="other">Large Scale Special Custom Orders</option>
+          </select>
+          <textarea rows="4" placeholder="Tell us about your event (Estimated guest counts, date, preferred menu selections...)" required></textarea>
+          <button type="submit" class="btn-primary" style="width: 100%; text-align: center;">Submit Quote Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section id="location-section" class="contact-location-container">
     <div class="map-card" style="width: 100%; max-width: 1200px; margin: 0 auto;">
-      <h3>Visit Us</h3>
+      <h3>Our Socials & Location</h3>
       <p class="address-text"><i class="fa-solid fa-location-dot"></i> 14200 International Blvd, Tukwila, Washington, 98168</p>
       <p class="hours-text"><i class="fa-solid fa-clock"></i> Thu - Sat: 4:30 PM - 9:00 PM | Sun: 12:30 PM - 5:00 PM</p>
+      
+      <div class="rewards-perks" style="margin-bottom: 2rem;">
+        <a href="https://instagram.com/54thstsoulcafe" target="_blank" class="perk-link">
+          <i class="fa-brands fa-instagram" style="font-size: 2rem; color: var(--yellow);"></i>
+          <span class="perk-title">Instagram</span>
+          <p class="perk-text">Follow us @54thStreetCafe</p>
+        </a>
+        <a href="https://www.facebook.com/p/54th-Street-Soul-Cafe-61586404553813/" target="_blank" class="perk-link">
+          <i class="fa-brands fa-facebook" style="font-size: 2rem; color: var(--yellow);"></i>
+          <span class="perk-title">Facebook</span>
+          <p class="perk-text">Like our page for updates</p>
+        </a>
+      </div>
+
       <div class="map-responsive">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.224169550974!2d-122.2936735234199!3d47.47579139700305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54904354c0e6988f%3A0xe104ffae3f6786ff!2s14200%20International%20Blvd%2C%20Tukwila%2C%20WA%2098168!5e0!3m2!1sen!2sus!4v1715975143000!5m2!1sen!2sus" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x5490437cbbaaaaaa%3A0x7cc30a6e83ef5f6c!2s14200%20International%20Blvd%2C%20Tukwila%2C%20WA%2098168!5e0!3m2!1sen!2sus!4v1716050000000!5m2!1sen!2sus" 
           width="100%" 
           height="450" 
           style="border:0; border-radius: 8px;" 
@@ -83,10 +170,14 @@
   </section>
 
   <footer class="site-footer">
-    <p>© 2026 54th St. Soul Cafe. Built with Love, Pride, & Flavor.</p>
-    <div class="social-links">
-      <a href="https://facebook.com/54thStSoulCafe" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-      <a href="https://instagram.com/54thstsoulcafe" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    <div class="footer-inner" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <h3 style="color: var(--yellow); font-family: var(--font-head);">54th Street Catering</h3>
+        <p style="font-size: 0.85rem; color: #aaa;">Authentic southern style comfort cuisine. Family catering pan trays, daily senior meal plans, and community love.</p>
+      </div>
+      <div style="font-size: 0.85rem; color: #888;">
+        © 2026 54th St. Soul Cafe & Catering. All Rights Reserved.
+      </div>
     </div>
   </footer>
 
