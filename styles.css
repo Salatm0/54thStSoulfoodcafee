@@ -5,7 +5,7 @@
 }
 :root {
   --red: #000000;
-  --red-dark: #9e0b22;
+  --red-dark: #222222;
   --yellow: #D4A574;
   --black: #111;
   --offwhite: #F9F6F1;
@@ -77,7 +77,7 @@ nav {
   font-weight: 700 !important;
 }
 .nav-order:hover {
-  background: #e6bc00 !important;
+  background: #c5935c !important;
   color: var(--black) !important;
 }
 
@@ -112,19 +112,6 @@ nav {
   align-items: center;
   width: 100%;
 }
-.hero-badge {
-  display: inline-block;
-  background: var(--yellow);
-  color: var(--black);
-  font-family: var(--font-head);
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 3px;
-  margin-bottom: 1rem;
-}
 .hero h1 {
   font-family: var(--font-head);
   font-size: 3.2rem;
@@ -149,7 +136,7 @@ nav {
   flex-wrap: wrap;
 }
 .btn-primary {
-  background: var(--red);
+  background: #000;
   color: #fff;
   border: none;
   padding: 14px 28px;
@@ -164,7 +151,8 @@ nav {
   transition: background .2s;
 }
 .btn-primary:hover {
-  background: var(--red-dark);
+  background: var(--yellow);
+  color: var(--black);
 }
 .btn-secondary {
   background: transparent;
@@ -218,7 +206,7 @@ section {
   font-size: .8rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--red);
+  color: #2D6A4F;
   font-weight: 700;
   margin-bottom: .4rem;
 }
@@ -236,7 +224,49 @@ section {
   color: var(--yellow);
 }
 
-/* ── MENU CARDS ── */
+/* ── SENIOR PROMO BANNER ── */
+.senior-promo-section {
+  background: #fff;
+  padding: 3rem 1.5rem;
+}
+.senior-card-wrapper {
+  background: linear-gradient(135deg, #1a3d2b 0%, #2a523a 100%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.senior-icon-side {
+  font-size: 5rem;
+  line-height: 1;
+}
+.senior-highlight-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+.senior-price-badge {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--black);
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.senior-rules-notice {
+  font-size: 0.85rem;
+  color: #ffd699;
+  margin-bottom: 1.5rem;
+}
+
+/* ── MENU IMAGE CONFIGS ── */
 .menu-section {
   background: #fff;
 }
@@ -262,13 +292,13 @@ section {
 }
 .tab.active,
 .tab:hover {
-  background: var(--red);
-  border-color: var(--red);
+  background: #111;
+  border-color: #111;
   color: #fff;
 }
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
 }
 .card {
@@ -277,106 +307,70 @@ section {
   border-radius: 8px;
   overflow: hidden;
   transition: transform .2s, box-shadow .2s;
-  cursor: pointer;
 }
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
-.card-img {
+.card-img-container {
   width: 100%;
-  aspect-ratio: 3/2;
-  object-fit: cover;
-  background: #f0e8d8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.5rem;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
 }
-.card-img.placeholder {
-  background: linear-gradient(135deg, #f5e6c8, #e8d0a0);
+.card-menu-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.card:hover .card-menu-img {
+  transform: scale(1.04);
 }
 .card-body {
-  padding: 1rem;
-}
-.card-tag {
-  display: inline-block;
-  background: var(--red);
-  color: #fff;
-  font-size: .65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 3px 8px;
-  border-radius: 3px;
-  margin-bottom: .5rem;
+  padding: 1.2rem;
 }
 .card-title {
   font-family: var(--font-head);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: .4rem;
   line-height: 1.2;
 }
 .card-desc {
-  font-size: .8rem;
+  font-size: .82rem;
   color: var(--gray);
   line-height: 1.5;
-  margin-bottom: .8rem;
+  margin-bottom: 1rem;
+  min-height: 45px;
 }
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid #f2f2f2;
+  padding-top: 0.8rem;
 }
 .card-price {
   font-family: var(--font-head);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--red);
+  color: #2a523a;
 }
-.card-order {
-  background: var(--red);
+.catering-label {
+  font-size: 0.68rem;
   color: #fff;
-  border: none;
-  padding: 7px 16px;
-  font-size: .78rem;
+  background: #333;
+  padding: 4px 8px;
+  border-radius: 3px;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background .2s;
-}
-.card-order:hover {
-  background: var(--red-dark);
-}
-.view-more {
-  text-align: center;
-  margin-top: 2rem;
-}
-.btn-outline {
-  background: none;
-  border: 2px solid var(--red);
-  color: var(--red);
-  padding: 11px 28px;
-  font-family: var(--font-head);
-  font-size: .95rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all .2s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-outline:hover {
-  background: var(--red);
-  color: #fff;
+  letter-spacing: 0.5px;
 }
 
-/* ── PROMO BLOCKS ── */
+/* ── PROMO BLOCKS CAROUSEL ── */
 .promo-blocks {
   background: var(--offwhite);
 }
@@ -408,16 +402,15 @@ section {
 .promo-block-body {
   padding: 1.5rem;
   flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 .promo-block-label {
   font-size: .7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--red);
+  color: #2D6A4F;
   margin-bottom: .3rem;
+  display: block;
 }
 .promo-block-title {
   font-family: var(--font-head);
@@ -430,8 +423,6 @@ section {
   font-size: .85rem;
   color: var(--gray);
   line-height: 1.6;
-  flex: 1;
-  margin-bottom: 1.2rem;
 }
 .promo-carousel-btn {
   position: absolute;
@@ -449,12 +440,8 @@ section {
   justify-content: center;
   z-index: 2;
 }
-.promo-carousel-btn.prev {
-  left: 12px;
-}
-.promo-carousel-btn.next {
-  right: 12px;
-}
+.promo-carousel-btn.prev { left: 12px; }
+.promo-carousel-btn.next { right: 12px; }
 .promo-carousel-dots {
   display: flex;
   justify-content: center;
@@ -467,15 +454,42 @@ section {
   border-radius: 50%;
   background: var(--border);
   cursor: pointer;
-  transition: background 0.2s;
 }
-.promo-carousel-dot.active {
-  background: var(--red);
+.promo-carousel-dot.active { background: #111; }
+
+/* ── BOOKING INPUT FORM ── */
+.booking-section { background: #fff; border-top: 1px solid #eee; }
+.booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.catering-form {
+  background: var(--offwhite);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.catering-form input,
+.catering-form select,
+.catering-form textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+.bullet-highlight {
+  background: var(--white);
+  border-left: 4px solid var(--yellow);
+  padding: 14px;
+  margin-top: 1.5rem;
+  border-radius: 0 4px 4px 0;
 }
 
-/* ── REWARDS ── */
+/* ── REWARDS / SOCIAL ── */
 .rewards-section {
-  background: var(--red);
+  background: #111;
   color: #fff;
 }
 .rewards-inner {
@@ -490,15 +504,27 @@ section {
   gap: 1rem;
   margin-top: 1.5rem;
 }
-.perk {
-  background: rgba(255,255,255,.1);
+.perk-link {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,.07);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  transition: transform .2s, background .2s;
+}
+.perk-link:hover {
+  background: rgba(255,255,255,.14);
+  transform: translateY(-3px);
 }
 .perk-icon {
-  font-size: 2rem;
   margin-bottom: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .perk-title {
   font-family: var(--font-head);
@@ -509,131 +535,50 @@ section {
 }
 .perk-text {
   font-size: .78rem;
-  color: rgba(255,255,255,.75);
-  line-height: 1.4;
-}
-.perk-link {
-  text-decoration: none;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform .2s, background .2s;
-}
-.perk-link:hover {
-  background: rgba(255,255,255,.2);
-  transform: translateY(-3px);
-}
-.perk-link .perk-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: .5rem;
+  color: rgba(255,255,255,.7);
 }
 .rewards-app-box {
-  background: rgba(0,0,0,.25);
+  background: rgba(255,255,255,.04);
   border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
-}
-.rewards-app-box p {
-  font-size: .9rem;
-  color: rgba(255,255,255,.8);
-  margin-bottom: 1.2rem;
-  line-height: 1.5;
-}
-.app-btns {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.app-btn {
-  background: rgba(255,255,255,.15);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.3);
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-size: .82rem;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background .2s;
-}
-.app-btn:hover {
-  background: rgba(255,255,255,.25);
 }
 
-/* ── SOCIAL / RESPONSIBILITY ── */
-.social-section {
-  background: #fff;
-}
-.resp-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.2rem;
-}
-.resp-card {
-  background: var(--offwhite);
-  border-radius: 8px;
-  padding: 1.4rem;
-  text-align: center;
-  border: 1px solid var(--border);
-}
-.resp-card-icon {
-  font-size: 2.2rem;
-  margin-bottom: .7rem;
-}
-.resp-card-title {
+/* ── VIEW MORE BUTTONS ── */
+.view-more { text-align: center; margin-top: 2rem; }
+.btn-outline {
+  background: none;
+  border: 2px solid #111;
+  color: #111;
+  padding: 11px 28px;
   font-family: var(--font-head);
-  font-size: 1rem;
-  text-transform: uppercase;
+  font-size: .95rem;
   font-weight: 700;
-  margin-bottom: .4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .2s;
+  text-decoration: none;
+  display: inline-block;
 }
-.resp-card-text {
-  font-size: .78rem;
-  color: var(--gray);
-  line-height: 1.5;
-}
-
-/* ── CAREERS ── */
-.careers-section {
-  background: var(--offwhite);
-}
-.careers-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-}
-.careers-img {
-  background: linear-gradient(135deg, #1a0a00, #5c2a00);
-  border-radius: 12px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 7rem;
+.btn-outline:hover {
+  background: #111;
+  color: #fff;
 }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--black);
+  background: #000;
   color: #fff;
   padding: 3rem 1.5rem 1.5rem;
 }
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+.footer-inner { max-width: 1200px; margin: 0 auto; }
 .footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255,255,255,.1);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .footer-logo {
   font-family: var(--font-head);
@@ -644,36 +589,8 @@ footer {
   display: block;
   text-decoration: none;
 }
-.footer-logo span {
-  color: #fff;
-}
-.footer-tagline {
-  font-size: .85rem;
-  color: rgba(255,255,255,.6);
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-}
-.social-row {
-  display: flex;
-  gap: .8rem;
-  margin-top: .5rem;
-}
-.social-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .9rem;
-  text-decoration: none;
-  color: #fff;
-  transition: background .2s;
-}
-.social-btn:hover {
-  background: var(--red);
-}
+.footer-logo span { color: #fff; }
+.footer-tagline { font-size: .85rem; color: rgba(255,255,255,.6); line-height: 1.6; }
 .footer-col-title {
   font-family: var(--font-head);
   font-size: .85rem;
@@ -683,83 +600,25 @@ footer {
   color: var(--yellow);
   margin-bottom: 1rem;
 }
-.footer-links {
-  list-style: none;
-}
-.footer-links li {
-  margin-bottom: .5rem;
-}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: .5rem; }
 .footer-links a {
   color: rgba(255,255,255,.65);
   text-decoration: none;
   font-size: .83rem;
-  transition: color .2s;
 }
-.footer-links a:hover {
-  color: #fff;
-}
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.footer-bottom p {
-  font-size: .78rem;
-  color: rgba(255,255,255,.4);
-}
-.footer-legal {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-.footer-legal a {
-  color: rgba(255,255,255,.4);
-  text-decoration: none;
-  font-size: .78rem;
-  transition: color .2s;
-}
-.footer-legal a:hover {
-  color: #fff;
-}
+.footer-links a:hover { color: #fff; }
+.footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.4); }
 
-/* ── MEDIA QUERIES ── */
+/* ── RESPONSIVE MEDIA FILTERS ── */
 @media (max-width: 900px) {
-  .hero-inner,
-  .deals-grid,
-  .rewards-inner,
-  .promo-grid,
-  .careers-inner,
-  .footer-top {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .rewards-perks {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr 1fr;
-  }
+  .hero-inner, .rewards-inner, .booking-grid, .footer-top { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .senior-card-wrapper { flex-direction: column; text-align: center; }
+  .senior-icon-side { display: none; }
 }
 @media (max-width: 600px) {
-  .nav-links {
-    display: none;
-  }
-
-  .cards-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr;
-  }
-
-  .rewards-perks {
-    grid-template-columns: 1fr;
-  }
+  .nav-links { display: none; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .rewards-perks { grid-template-columns: 1fr; }
 }
