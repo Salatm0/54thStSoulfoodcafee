@@ -1,4 +1,3 @@
-// --- MENU DATABASE ARRAY WITH DIRECT GITHUB FILE LINKS ---
 const menuItems = [
     // --- DINNERS ---
     {cat:"dinner", img:"Baked catfish.jpeg", title:"Baked Fish Dinner", desc:"Perfectly seasoned, oven-baked catfish served hot over a fluffy bed of white rice.", price:"$15.00"},
