@@ -1,70 +1,40 @@
-// --- MENU DATABASE ARRAY - ONLY ITEMS WITH REAL PHOTO UPLOADS ---
+// --- MENU DATABASE ARRAY WITH DIRECT GITHUB FILE LINKS ---
 const menuItems = [
-    // --- DINNERS & GUMBO ---
-    {
-        cat: "dinner", 
-        img: "Baked catfish.jpeg", 
-        title: "Baked Fish Dinner", 
-        desc: "Perfectly seasoned, oven-baked catfish served hot over a fluffy bed of white rice. Prepared with love, flavor, and pride.", 
-        price: "$15.00"
-    },
-    {
-        cat: "dinner", 
-        img: "Pan of catfish.jpeg", 
-        title: "Catfish Dinner", 
-        desc: "Crispy cornmeal-battered fried catfish catering trays. Made using the traditional kitchen skills Deon learned working at Seattle's historic Catfish Corner.", 
-        price: "$20.00"
-    },
-    {
-        cat: "dinner", 
-        img: "Seafood gumbo.jpeg", 
-        title: "Seafood Gumbo", 
-        desc: "Rich, deeply flavored authentic southern gumbo loaded with chicken, hot links, shrimp, and white rice.", 
-        price: "$20.00"
-    },
+    // --- DINNERS ---
+    {cat:"dinner", img:"Baked catfish.jpeg", title:"Baked Fish Dinner", desc:"Perfectly seasoned, oven-baked catfish served hot over a fluffy bed of white rice.", price:"$15.00"},
+    {cat:"dinner", img:"Pan of catfish.jpeg", title:"Catfish Dinner", desc:"Crispy fried catfish with your choice of two signature sides and fresh cornbread.", price:"$20.00"},
+    {cat:"dinner", img:"Fried chicken wings.jpeg", title:"Chicken Strip Dinner", desc:"Golden fried chicken strips with your choice of two signature sides and cornbread.", price:"$20.00"},
+    {cat:"dinner", img:"Fried shrimp.jpeg", title:"Shrimp Dinner", desc:"Perfectly battered and fried shrimp served with your choice of two sides and cornbread.", price:"$20.00"},
+    {cat:"dinner", img:"Pan of catfish.jpeg", title:"Rib Dinner", desc:"Tender ribs with a tangy barbecue glaze on the side, served with two sides and cornbread.", price:"$20.00"},
+    {cat:"dinner", img:"Seafood gumbo.jpeg", title:"Seafood Gumbo", desc:"Rich, deeply flavored authentic southern gumbo loaded with chicken, hot links, shrimp, and white rice.", price:"$20.00"},
 
     // --- PO' BOIS ---
-    {
-        cat: "Po' Boi", 
-        img: "Catfish poi boy.jpeg", 
-        title: "Catfish Po' Boi", 
-        desc: "Generous portion of fried catfish bites on fresh hoagie bread, heavily drizzled in our house signature Rosie's Sauce.", 
-        price: "$15.00"
-    },
+    {cat:"Po' Boi", img:"Catfish poi boy.jpeg", title:"Catfish Po' Boi", desc:"Fried catfish bites on fresh hoagie bread heavily drizzled in our house signature Rosie's Sauce.", price:"$15.00"},
+    {cat:"Po' Boi", img:"Catfish poi boy.jpeg", title:"Chicken Po' Boi", desc:"Fried chicken on hoagie bread drizzled in our signature Rosie's Sauce.", price:"$15.00"},
+    {cat:"Po' Boi", img:"Catfish poi boy.jpeg", title:"Shrimp Po' Boi", desc:"Fried Shrimp stacked inside hoagie bread drizzled with house Rosie's Sauce.", price:"$15.00"},
 
     // --- BASKETS ---
-    {
-        cat: "Baskets", 
-        img: "Fried chicken wings.jpeg", 
-        title: "Wings Basket", 
-        desc: "Crispy, golden, well-seasoned fried chicken wings served over a hot bed of crinkle-cut french fries.", 
-        price: "$10.00"
-    },
+    {cat:"Baskets", img:"Fried chicken wings.jpeg", title:"Wings Basket", desc:"Crispy seasoned fried chicken wings served over a hot bed of crinkle-cut french fries.", price:"$10.00"},
+    {cat:"Baskets", img:"Pan of catfish.jpeg", title:"Catfish Basket", desc:"Fried catfish chunks accompanied by crinkle-cut fries.", price:"$10.00"},
+    {cat:"Baskets", img:"Fried shrimp.jpeg", title:"Shrimp Basket", desc:"Golden fried shrimp served alongside a mountain of crispy fries.", price:"$10.00"},
+    {cat:"Baskets", img:"Pan of catfish.jpeg", title:"Money Burger Basket", desc:"Beef Patty, Oh Boy Oberto Beef Hot Link, onions, lettuce, cheese, and Rosie's Sauce on toasted buns with fries.", price:"$15.00"},
 
-    // --- SIDES & SAUCES ---
-    {
-        cat: "Side Dishes", 
-        img: "Greens with turkey meat.jpeg", 
-        title: "Southern Greens", 
-        desc: "Tender collard greens slow-cooked to perfection with savory smoked turkey meat.", 
-        price: "$5.00"
-    },
-    {
-        cat: "Side Dishes", 
-        img: "Rosie’s Sauce.jpeg", 
-        title: "Rosie's Sauce (Jar)", 
-        desc: "Our famous house specialty sauce, made in loving memory of Rosemary Jackson. Perfect to add to your bulk catering orders.", 
-        price: "$8.00"
-    },
+    // --- SIDE DISHES & SAUCE ---
+    {cat:"Side Dishes", img:"Greens with turkey meat.jpeg", title:"Southern Greens", desc:"Tender collard greens slow-cooked to perfection with savory smoked turkey meat.", price:"$5.00"},
+    {cat:"Side Dishes", img:"Pan of catfish.jpeg", title:"Cheesy Macaroni", desc:"Creamy macaroni pasta completely baked inside a rich cheese sauce coating.", price:"$5.00"},
+    {cat:"Side Dishes", img:"Pan of catfish.jpeg", title:"Beans and Rice", desc:"Tender beans paired with fluffy white rice, creating a simple and hearty side dish.", price:"$5.00"},
+    {cat:"Side Dishes", img:"Pan of catfish.jpeg", title:"Dirty Rice", desc:"Savory rice mixed with seasoned ground meat and aromatic spices.", price:"$5.00"},
+    {cat:"Side Dishes", img:"Rosie’s Sauce.jpeg", title:"Rosie's Sauce (Jar)", desc:"Our house specialty sauce made in loving memory of Rosemary Jackson. Perfect for takeaway orders.", price:"$8.00"},
+
+    // --- DRINKS ---
+    {cat:"drinks", img:"Strawberry shortcake.jpeg", title:"Strawberry Lemonade", desc:"Freshly squeezed lemonade blended thoroughly with sweet pureed strawberries.", price:"$5.00"},
+    {cat:"drinks", img:"Strawberry shortcake.jpeg", title:"Classic Lemonade / Kool-Aid", desc:"Nostalgic refreshing beverages, sweetened just right.", price:"$3.00"},
+    {cat:"drinks", img:"Strawberry shortcake.jpeg", title:"Bottled Water", desc:"Pure and essential hydration.", price:"$1.00"},
 
     // --- DESSERTS ---
-    {
-        cat: "desserts", 
-        img: "Strawberry shortcake.jpeg", 
-        title: "Strawberry Shortcake Cup", 
-        desc: "Layers of moist, fluffy cake with sweet strawberries in rich syrup and thick whipped cream.", 
-        price: "$5.00"
-    }
+    {cat:"desserts", img:"Strawberry shortcake.jpeg", title:"Strawberry Shortcake Cup", desc:"Layers of fluffy cake with sweet strawberries in syrup and whipped cream.", price:"$5.00"},
+    {cat:"desserts", img:"Strawberry shortcake.jpeg", title:"Homemade Banana Pudding", desc:"Creamy pudding layered with vanilla wafers and fresh banana slices.", price:"$5.00"},
+    {cat:"desserts", img:"Strawberry shortcake.jpeg", title:"Cake Of The Day", desc:"A fresh slice of our premium rotating daily homemade surprise cake flavors.", price:"$5.00"}
 ];
 
 let activeFilter = 'all';
@@ -81,10 +51,9 @@ function filterMenu(cat, btn) {
 function renderMenu() {
   const grid = document.getElementById('menu-grid');
   if (!grid) return;
-  
+
   const items = activeFilter === 'all' ? menuItems : menuItems.filter(i => i.cat === activeFilter);
-  // Show all matching items directly since the list is beautifully compact now
-  const show = items;
+  const show = (activeFilter === 'all' && !showAll) ? items.slice(0, 8) : items;
 
   grid.innerHTML = show.map(item => `
     <div class="card">
@@ -103,12 +72,18 @@ function renderMenu() {
     </div>
   `).join('');
 
-  // Hide the view more button container because everything fits perfectly now
   const container = document.getElementById('view-more-container');
-  if (container) container.style.display = 'none';
+  if (container) container.style.display = activeFilter === 'all' ? 'block' : 'none';
+
+  const btn = document.getElementById('view-more-btn');
+  if (btn) btn.textContent = showAll ? 'Show Less ↑' : 'View Full Menu Options';
 }
 
-// Initial Run
+function toggleShowAll() {
+  showAll = !showAll;
+  renderMenu();
+}
+
 renderMenu();
 
 // ── PROMO CAROUSEL ──
